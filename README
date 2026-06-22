@@ -1,0 +1,1 @@
+This repository contains the code required to stream live video from a client to a remote server via TCP sockets, where each frame is processed in real time for object segmentation using FastSAM or YOLO, followed by object selection based on spatial criteria and classification using lightweight deep learning models such as MobileNetV3, ConvNeXt-Tiny, or YOLO classification heads.
