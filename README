@@ -1,2 +1,21 @@
-This repository contains the code required to stream live video from a client to a remote server via TCP sockets, where each frame is processed in real time for object segmentation using FastSAM or YOLO, followed by object selection based on spatial criteria and classification using lightweight deep learning models such as MobileNetV3, ConvNeXt-Tiny, or YOLO classification heads.
-Attention, you need checkpoints : yolo11n-cls.pt, yolov8s.pt, FastSAM-s.pt, produced by ultralytics.
+# Real-Time Object Segmentation and Classification
+
+This repository contains the code required to stream live video from a client to a remote server via TCP sockets. Each frame is processed in real time through the following pipeline:
+
+1. Object segmentation using **FastSAM** or **YOLO**.
+2. Object selection based on spatial criteria (center)
+3. Object classification using lightweight deep learning models such as **MobileNetV3**, **ConvNeXt-Tiny**, or **YOLO classification models**.
+
+## Requirements
+
+Before running the project, download the following checkpoints from Ultralytics:
+
+* `yolo11n-cls.pt`
+* `yolov8s.pt`
+* `FastSAM-s.pt`
+
+You can also use alternative or more accurate models available from Ultralytics if desired.
+
+## Performance
+
+The complete pipeline achieved an end-to-end latency of **30–50 ms per frame** when executed on a server equipped with an **NVIDIA RTX A6000** GPU.
