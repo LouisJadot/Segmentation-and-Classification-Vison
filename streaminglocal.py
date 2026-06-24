@@ -5,7 +5,7 @@ import struct
 import time
 
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client_socket.connect(('127.0.0.1', 10000))
+client_socket.connect(('127.0.0.1', 10002))
 
 cap = cv2.VideoCapture(2)
 payload_size = struct.calcsize("Q")
