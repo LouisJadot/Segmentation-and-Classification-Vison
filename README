@@ -14,8 +14,11 @@ Before running the project, download the following checkpoints from Ultralytics:
 * `yolov8s.pt`
 * `FastSAM-s.pt`
 
-You can also use alternative or more accurate models available from Ultralytics if desired.
+You can also use alternative or more accurate models available from Ultralytics if desired. 
+
+You should check the local host number too.
 
 ## Performance
 
 The complete pipeline achieved an end-to-end latency of **30–50 ms per frame** when executed on a server equipped with an **NVIDIA RTX A6000** GPU.
+
